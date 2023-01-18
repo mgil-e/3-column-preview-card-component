@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* fonts */
+    --ff-title: 'Big Shoulders Display';
+    --ff-body: 'Lexend Deca';
+
+    /* colors */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box  ;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--light-gray);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    padding: 50px;
+}
+
+.card img {
+    margin-bottom: 44px;
+}
+
+.card h1 {
+    margin-bottom: 44px;
+
+    font-family: var(--ff-title);
+    text-transform: uppercase;
+    color: var(--light-gray);
+    font-size: 34px;
+}
+
+.card p {
+    margin-bottom: 44px;
+
+    font-family: var(--ff-body);
+    color: var(--transparent-white);
+    font-size: 16px;
+}
+
+.card button {
+    border: none;
+    border-radius: 25px;
+    background-color: var(--light-gray);
+    padding: 14px 26px;
+    font-size: 16px;
+}
+
+/* Specific card */
+
+.sedans {
+    border: none;
+    border-radius: 10px 0 0 10px;
+    background-color: var(--bright-orange);
+}
+
+.sedans button {
+    color: var(--bright-orange);
+}
+
+.suvs {
+    border: none;
+    border-radius: 0;
+    background-color: var(--dark-cyan);
+}
+
+.suvs button {
+    color: var(--dark-cyan);
+}
+
+.luxury {
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background-color: var(--very-dark-cyan);
+}
+
+.luxury button {
+    color: var(--very-dark-cyan);
+}
+
+
+/* Hover */
+
+.card button:hover {
+    background-color: transparent;
+    color: var(--light-gray);
+    border: 2px solid var(--light-gray);
+    
+    cursor: pointer;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 900px) {
+    body {
+        width: 100%;    
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 60px;
+    }
+
+
+    .sedans {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .luxury {
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+/* Attribution */
+
+.attribution {
+    font-family: var(--ff-body);
+    padding: 60px 0 40px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a:hover { color: hsl(86, 45%, 44%); }
